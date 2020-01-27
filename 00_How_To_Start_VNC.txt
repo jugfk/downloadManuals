@@ -1,0 +1,8 @@
+==========================================================================================
+How To Use RealVNC on Mac,Windows, and Linux:
+==========================================================================================
+/usr/lib/vino/vino-server
+
+Pleas command the below that when having connection problem.
+gsettings set org.gnome.Vino require-encryption false
+==========================================================================================
