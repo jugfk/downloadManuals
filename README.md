@@ -20,6 +20,7 @@ wget https://raw.githubusercontent.com/jetsonworld/downloadManuals/master/02_Dow
 wget https://raw.githubusercontent.com/jetsonworld/downloadManuals/master/03_How_To_Install_VSCode.txt
 wget https://raw.githubusercontent.com/jetsonworld/downloadManuals/master/04_How_To_Install_Jupyter_Notebook.txt
 wget https://raw.githubusercontent.com/jetsonworld/downloadManuals/master/05_How_To_Setup_SWAP.txt
+wget https://raw.githubusercontent.com/jetsonworld/downloadManuals/master/06_How_To_use_PowerModes_CustomizedMode.txt
 ```
 
 ## 텍스트파일내용을 보는법:
