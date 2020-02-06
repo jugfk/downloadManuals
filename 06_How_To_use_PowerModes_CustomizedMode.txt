@@ -1,0 +1,34 @@
+===================================================================================
+How To Use Power Modes on Jetson Nano:
+===================================================================================
+- MAXN:
+sudo nvpmodel -m 0
+- 5W:
+sudo nvpmodel -m 1
+- Check current status:
+sudo nvpmodel -q
+- More detail:
+sudo nvpmodel -q --verbose
+- Help:
+nvpmodel -h
+
+- Add my customized text on '/etc/nvpmodel.conf' for LOW Mode
+----------------------------------------------------------------------------------
+< POWER_MODEL ID=2 NAME=LOW >
+CPU_ONLINE CORE_0 1
+CPU_ONLINE CORE_1 0
+CPU_ONLINE CORE_2 0
+CPU_ONLINE CORE_3 0
+CPU_A57 MIN_FREQ  0
+CPU_A57 MAX_FREQ 102000
+GPU_POWER_CONTROL_ENABLE GPU_PWR_CNTL_EN on
+GPU MIN_FREQ 0
+GPU MAX_FREQ 640000000
+GPU_POWER_CONTROL_DISABLE GPU_PWR_CNTL_DIS auto
+EMC MAX_FREQ 1600000000
+
+# mandatory section to configure the default mode
+< PM_CONFIG DEFAULT=0 >
+----------------------------------------------------------------------------------
+reboot
+===================================================================================
