@@ -1,0 +1,43 @@
+================================================================================
+How To Start Docker Container on Jetson Nano:
+================================================================================
+# step 1, install Python PIP
+$ sudo apt-get update -y
+$ sudo apt-get install -y curl
+$ curl -sSL https://bootstrap.pypa.io/get-pip.py | sudo python
+
+# step 2, install Docker Compose build dependencies for Ubuntu 18.04 on aarch64
+$ sudo apt-get install -y libffi-dev
+$ sudo apt-get install -y python-openssl
+
+# step 3, install latest Docker Compose via pip
+$ export DOCKER_COMPOSE_VERSION=1.24.0
+$ sudo pip install docker-compose=="${DOCKER_COMPOSE_VERSION}"
+
+
+sudo usermod -aG docker pirate
+
+
+# Check the versions:
+docker-compose version
+docker-compose --version
+docker version
+sudo docker version
+
+sudo docker info | grep nvidia
+sudo dpkg --get-selections | grep nvidia
+
+
+
+docker run hello-world
+sudo docker run -it --runtime nvidia devicequery
+
+
+- References:
+https://www.dlology.com/blog/how-to-run-keras-model-on-jetson-nano-in-nvidia-docker-container/
+https://github.com/collabnix/pico
+https://github.com/NVIDIA/nvidia-docker/wiki/NVIDIA-Container-Runtime-on-Jetson
+https://docs.docker.com/compose/gettingstarted/
+https://blog.hypriot.com/post/nvidia-jetson-nano-install-docker-compose/
+https://collabnix.com/why-docker-19-03-on-nvidia-jetson-nano/
+================================================================================
