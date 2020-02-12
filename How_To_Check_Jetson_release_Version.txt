@@ -1,0 +1,12 @@
+==============================================================================================
+How To check Jetson Release:
+==============================================================================================
+- Install jetson-stats
+sudo -H pip install jetson-stats
+- Update jetson-stats
+sudo -H pip install -U jetson-stats
+
+sudo jtop
+jetson_release
+export | grep JETSON
+==============================================================================================
