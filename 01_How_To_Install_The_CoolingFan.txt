@@ -17,5 +17,10 @@ How To Install The Fan Driver:
 sudo apt install python3-dev
 git clone https://github.com/jetsonworld/jetson-fan-ctl.git
 cd jetson-fan-ctl/
-sudo ./install.sh
+sudo sh install.sh
+
+- Adjust the fan speed:
+sudo vi /etc/automagic-fan/config.json
+- Check the fan status:
+sudo service automagic-fan status
 ==========================================================================
