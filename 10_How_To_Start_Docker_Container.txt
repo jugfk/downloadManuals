@@ -1,0 +1,67 @@
+================================================================================================
+How To Start Docker Container on Jetson Nano:
+================================================================================================
+# Check the versions:
+sudo docker version
+
+# Check NVIDIA Container Runtime
+sudo docker info | grep nvidia
+sudo dpkg --get-selections | grep nvidia
+------------------------------------------------------------------------------------------------
+# 1st experiment
+sudo docker run hello-world
+sudo docker images
+------------------------------------------------------------------------------------------------
+# 2nd experiment
+# Run Node-RED on Docker Container
+sudo docker run -it -p 1880:1880 --name mynodered nodered/node-red
+wget https://raw.githubusercontent.com/jetsonworld/javascript-thermal-monitor/master/flows.json
+sudo docker images
+sudo docker ps
+
+# If you need to restart the container (e.g. after a reboot or restart of the Docker daemon):
+sudo docker start mynodered
+sudo docker stop mynodered
+
+# To reattach to the terminal (to see logging) run:
+sudo docker attach mynodered
+------------------------------------------------------------------------------------------------
+# 3rd experiment
+# NGINX Web Server
+mkdir example
+cd example
+wget https://raw.githubusercontent.com/jetsonworld/startDockerContainer/master/Dockerfile
+sudo docker build --tag hello:0.1 .
+sudo docker run --name hello-nginx -d -p 80:80 -v /root/data:/data hello:0.1
+sudo docker ps
+sudo docker images
+
+# Start & stop hello-nginx
+sudo docker start hello-nginx
+sudo docker stop hello-nginx
+
+------------------------------------------------------------------------------------------------
+# Docker Commands
+# List containers
+sudo docker ps
+# List port mappings or a specific mapping for the container
+sudo docker port mynodered
+# List the most recently created images
+sudo docker images
+# Get real time events from the server
+sudo docker events
+# Display system-wide information
+sudo docker info
+# Docker STATS
+sudo docker stats
+
+# References:
+https://docs.docker.com/engine/reference/commandline/
+https://nodered.org/docs/getting-started/docker
+https://www.dlology.com/blog/how-to-run-keras-model-on-jetson-nano-in-nvidia-docker-container/
+https://github.com/collabnix/pico
+https://github.com/NVIDIA/nvidia-docker/wiki/NVIDIA-Container-Runtime-on-Jetson
+https://docs.docker.com/compose/gettingstarted/
+https://blog.hypriot.com/post/nvidia-jetson-nano-install-docker-compose/
+https://collabnix.com/why-docker-19-03-on-nvidia-jetson-nano/
+================================================================================================

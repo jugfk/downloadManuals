@@ -1,0 +1,14 @@
+===================================================================================
+How To Use Power Modes on Jetson Nano:
+===================================================================================
+- MAXN:
+sudo nvpmodel -m 0
+- 5W:
+sudo nvpmodel -m 1
+- Check current status:
+sudo nvpmodel -q
+- More detail:
+sudo nvpmodel -q --verbose
+- Help:
+nvpmodel -h
+===================================================================================
