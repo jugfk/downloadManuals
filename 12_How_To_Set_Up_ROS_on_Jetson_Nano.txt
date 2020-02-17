@@ -1,0 +1,8 @@
+======================================================================================
+How To Set up & imprement ROS on Jetson Nano:
+======================================================================================
+wget https://raw.githubusercontent.com/jetsonworld/installROS/master/install-ros.sh
+sh install-ros.sh
+roscore
+rosrun turtlesim turtlesim_node
+======================================================================================
