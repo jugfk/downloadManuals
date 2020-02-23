@@ -20,13 +20,16 @@ OPENCV=1
 ---------------------------------------------------------------
 make
 
+==========================================================================================================
+- Excute YOLO:
+cd darknet
 ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 
 - Tiny YOLO:
 wget https://pjreddie.com/media/files/yolov3-tiny.weights
 ./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights data/dog.jpg
 
-
+==========================================================================================================
 - Refereces:
 https://wendys.tistory.com/143?fbclid=IwAR3F_bEJnIoREajvQqrHO51pHxLu0fN-rPbq7VHxnkjKX7G4WUGfgt1DH50
 ===========================================================================================================
