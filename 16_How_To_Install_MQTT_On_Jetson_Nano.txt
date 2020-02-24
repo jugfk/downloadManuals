@@ -10,7 +10,7 @@ sudo pip install paho-mqtt
 sudo /etc/init.d/mosquitto stop
 sudo /etc/init.d/mosquitto start
 
-- Chect the mosqutto stat:
+- Check the mosqutto condition:
 sudo netstat -nap | grep mosquitto
 
 - Testing MQTT:
