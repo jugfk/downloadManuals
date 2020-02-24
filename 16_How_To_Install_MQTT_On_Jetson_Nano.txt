@@ -6,9 +6,15 @@ sudo apt-get update
 sudo apt-get install -y mosquitto mosquitto-clients
 sudo pip install paho-mqtt
 
+- Stop & Start mosquitto broker:
+sudo /etc/init.d/mosquitto stop
+sudo /etc/init.d/mosquitto start
+
+- Chect the mosqutto stat:
+sudo netstat -nap | grep mosquitto
+
 - Testing MQTT:
 mosquitto
 mosquitto_sub -v -t 'topic/test'
 mosquitto_pub -t 'topic/test' -m 'helloWorld'
-
 ===================================================================================
