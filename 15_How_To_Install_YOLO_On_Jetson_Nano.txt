@@ -3,6 +3,7 @@ How To Install YOLO on Jetson Nano:
 ===========================================================================================================
 - OpenCV 4.1
 git clone https://github.com/jetsonworld/buildOpneCV.git
+cd buildOpenCV
 ./buildOpenCV.sh |& tee openCV_build.log
 make -j4
 ===========================================================================================================
