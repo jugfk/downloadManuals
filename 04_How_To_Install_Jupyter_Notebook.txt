@@ -6,17 +6,17 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python2 get-pip.py
 sudo python3 get-pip.py
 
-sudo apt install python3-pip
-sudo apt install python3-pil
-sudo apt install python-pip
-sudo apt install python-pil
+sudo apt install -y python3-pip
+sudo apt install -y python3-pil
+sudo apt install -y python-pip
+sudo apt install -y python-pil
 sudo pip3 install --upgrade numpy
 sudo pip2 install --upgrade numpy
 
-sudo apt install nodejs
-sudo apt install npm
+sudo apt install -y nodejs
+sudo apt install -y npm
 
-sudo apt install jupyter
+sudo apt install -y jupyter
 sudo pip3 install jupyterlab
 sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager
 sudo jupyter labextension install @jupyterlab/statusbar
