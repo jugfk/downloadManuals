@@ -14,7 +14,7 @@ tegrastats
 tegrastats --interval 5000
 
 (4) Checking Jetson Statas
-sudo apt install python-pip
+sudo apt install -y python-pip
 sudo -H pip install jetson-stats
 sudo jtop
 
