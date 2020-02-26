@@ -1,5 +1,5 @@
 ===================================================================================
-How To Install Deep Counter on Jetson Nano:
+How To Install OpneCV 4.1 on Jetson Nano:
 ===================================================================================
 - OpenCV 4.1
 1. Updating the packages:
@@ -47,30 +47,3 @@ cmake     -D WITH_CUDA=ON \
 make -j4
 sudo make install
 ===========================================================================================================
-- YOLO with cuda: 
-sudo apt update
-cd /usr/local/
-ls
--Check the cuda version
-export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-git clone https://github.com/AlexeyAB/darknet
-cd darknet
-wget https://pjreddie.com/media/files/yolov3.weights
-wget https://pjreddie.com/media/files/yolov3-tiny.weights
-
-sudo vi Makefile
----------------------------------------------------------------
-GPU=1
-CUDNN=1
-OPENCV=1
----------------------------------------------------------------
-make
-
-==========================================================================================================
-- Tiny YOLO:
-wget https://pjreddie.com/media/files/yolov3-tiny.weights
-./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights data/dog.jpg
-
-===================================================================================
