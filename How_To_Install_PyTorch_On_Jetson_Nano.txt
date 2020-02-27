@@ -1,0 +1,15 @@
+==================================================================================================
+How To Install PyTorch On Jetson Nano:
+==================================================================================================
+- PyTorch v1.4.0
+-  Python 3.6
+wget https://nvidia.box.com/shared/static/ncgzus5o23uck9i5oth2n8n06k340l6k.whl -O torch-1.4.0-cp36-cp36m-linux_aarch64.whl
+sudo apt-get install python3-pip libopenblas-base
+pip3 install Cython
+pip3 install numpy torch-1.4.0-cp36-cp36m-linux_aarch64.whl
+
+- Python 2.7
+wget https://nvidia.box.com/shared/static/1v2cc4ro6zvsbu0p8h6qcuaqco1qcsif.whl -O torch-1.4.0-cp27-cp27mu-linux_aarch64.whl
+sudo apt-get install libopenblas-base
+sudo pip2 install torch-1.4.0-cp27-cp27mu-linux_aarch64.whl
+==================================================================================================

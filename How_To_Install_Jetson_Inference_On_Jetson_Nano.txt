@@ -1,0 +1,19 @@
+===============================================================================================
+How To Install Jetson Inference On Jetson Nano:
+===============================================================================================
+# download the repo
+git clone https://github.com/dusty-nv/jetson-inference
+cd jetson-inference
+git submodule update --init
+
+# configure build tree
+mkdir build
+cd build
+cmake ../
+
+# build and install
+make 
+sudo make install
+sudo ldconfig
+===============================================================================================
+
