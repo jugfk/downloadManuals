@@ -15,5 +15,10 @@ cmake ../
 make 
 sudo make install
 sudo ldconfig
-===============================================================================================
 
+# Start the Jetson Inference
+cd /home/ubuntu/jetson-inference/build/aarch64/bin
+python3 detectnet-camera.py
+python3 imagenet-camera.py
+python3 my-detection.py
+===============================================================================================
