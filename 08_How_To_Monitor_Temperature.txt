@@ -25,19 +25,19 @@ sudo apt update
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python2 get-pip.py
 sudo python3 get-pip.py
-sudo apt install python-pip
-sudo apt install python3-pip
+sudo apt install -y python-pip
+sudo apt install -y python3-pip
 sudo pip3 install numpy
-sudo apt-get install python-matplotlib
-sudo apt-get install python3-matplotlib
+sudo apt-get install -y python-matplotlib
+sudo apt-get install -y python3-matplotlib
 
 git clone https://github.com/jetsonworld/jetson-thermal-monitor.git
 cd jetson-thermal-monitor
 python3 jetson_temp_monitor.py
 
 (2) JavaScript Programming
-sudo apt install nodejs
-sudo apt install npm
+sudo apt install -y nodejs
+sudo apt install -y npm
 sudo npm install -g --unsafe-perm node-red
 node -v
 npm -v
