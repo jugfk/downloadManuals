@@ -14,6 +14,7 @@ sudo sh -c 'echo 0 > /sys/devices/pwm-fan/target_pwm'
 ==========================================================================
 How To Install The Fan Driver:
 ==========================================================================
+sudo apt update
 sudo apt install -y python3-dev
 git clone https://github.com/jetsonworld/jetson-fan-ctl.git
 cd jetson-fan-ctl/
