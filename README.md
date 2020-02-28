@@ -12,7 +12,11 @@ ls
 ```
 
 혹은
+```
+wget https://github.com/jetsonworld/downloadManuals/raw/master/script.zip
+```
 
+혹은
 ```
 wget https://raw.githubusercontent.com/jetsonworld/downloadManuals/master/00_How_To_Start_VNC.txt
 wget https://raw.githubusercontent.com/jetsonworld/downloadManuals/master/01_How_To_Install_The_CoolingFan.txt
