@@ -3,7 +3,7 @@ How To Set up SWAP on Jetson Nano:
 ======================================================================
 free -m
 swapon -s
-sudo dd if=/dev/zero of=/var/swapfile bs=1G count=4
+sudo dd if=/dev/zero of=/var/swapfile bs=1G count=6
 sudo mkswap /var/swapfile
 sudo chmod 600 /var/swapfile
 sudo vi /etc/fstab
