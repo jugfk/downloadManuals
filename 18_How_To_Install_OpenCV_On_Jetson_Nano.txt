@@ -2,6 +2,10 @@
 How To Install OpneCV 4.1 on Jetson Nano:
 ===================================================================================
 - OpenCV 4.1
+0. Download the instruction script:
+wget https://raw.githubusercontent.com/jetsonworld/BuildOpenCV/master/18_How_To_Install_OpenCV_On_Jetson_Nano.txt
+cat 18_How_To_Install_OpenCV_On_Jetson_Nano.txt
+
 1. Updating the packages:
 sudo apt update
 sudo apt install -y build-essential cmake git libgtk2.0-dev pkg-config  libswscale-dev libtbb2 libtbb-dev
