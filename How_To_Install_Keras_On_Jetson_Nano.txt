@@ -3,8 +3,7 @@ How To Install Keras On Jetson Nano:
 =========================================================================================
 - Install Keras
 sudo apt-get install -y build-essential libatlas-base-dev gfortran
-sudo pip3 install keras
-sudo pip2 install keras
+sudo pip3 install keras==1.2.2
 
 - Download Keras Tutorial:
 git clone https://github.com/tgjeon/Keras-Tutorials.git
