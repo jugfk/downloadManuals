@@ -1,0 +1,34 @@
+===============================================================================================
+How To Install Jetson Inference On Jetson Nano:
+===============================================================================================
+# download the repo
+git clone https://github.com/dusty-nv/jetson-inference
+cd jetson-inference
+git submodule update --init
+
+# configure build tree
+mkdir build
+cd build
+cmake ../
+
+# build and install
+make 
+sudo make install
+sudo ldconfig
+
+## Start the Jetson Inference
+(1) Object Detection
+cd /home/ubuntu/jetson-inference/build/aarch64/bin
+python3 detectnet-camera.py
+python3 imagenet-camera.py
+python3 my-detection.py
+
+(2) Image Detection 
+chmod +x my-recognition.py
+wget https://raw.githubusercontent.com/dusty-nv/jetson-inference/master/data/images/polar_bear.jpg
+./my-recognition.py polar_bear.jpg
+
+wget https://raw.githubusercontent.com/dusty-nv/jetson-inference/master/data/images/brown_bear.jpg
+./my-recognition.py brown_bear.jpg
+
+===============================================================================================
