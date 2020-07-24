@@ -31,7 +31,7 @@ cd darknet
 ./darknet detect cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg
 
 ==========================================================================================================
-- Refereces:
+- References:
 https://github.com/AlexeyAB/darknet
 https://wendys.tistory.com/143?fbclid=IwAR3F_bEJnIoREajvQqrHO51pHxLu0fN-rPbq7VHxnkjKX7G4WUGfgt1DH50
 ===========================================================================================================
