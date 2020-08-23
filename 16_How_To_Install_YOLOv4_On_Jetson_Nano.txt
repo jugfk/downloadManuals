@@ -1,0 +1,37 @@
+===========================================================================================================
+How To Install YOLO on Jetson Nano:
+Jetpack 4.4 [L4T 32.4.3]
+CUDA: 10.2
+===========================================================================================================
+sudo apt update
+cd /usr/local/
+-Check the cuda version
+export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+git clone https://github.com/AlexeyAB/darknet
+cd darknet
+wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
+
+sudo vi Makefile
+---------------------------------------------------------------
+GPU=1
+CUDNN=1
+OPENCV=1
+---------------------------------------------------------------
+make
+
+==========================================================================================================
+- Excute YOLO:
+cd darknet
+./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg
+
+- Tiny YOLO:
+./darknet detect cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg
+
+==========================================================================================================
+- References:
+https://github.com/AlexeyAB/darknet
+https://wendys.tistory.com/143?fbclid=IwAR3F_bEJnIoREajvQqrHO51pHxLu0fN-rPbq7VHxnkjKX7G4WUGfgt1DH50
+===========================================================================================================

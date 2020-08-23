@@ -1,0 +1,20 @@
+===================================================================================
+How To Install MQTT on Jetson Nano:
+===================================================================================
+- Setting up MQTT v3.1:
+sudo apt-get update
+sudo apt-get install -y mosquitto mosquitto-clients
+sudo pip install paho-mqtt
+
+- Stop & Start mosquitto broker:
+sudo /etc/init.d/mosquitto stop
+sudo /etc/init.d/mosquitto start
+
+- Check the mosqutto condition:
+sudo netstat -nap | grep mosquitto
+
+- Testing MQTT:
+mosquitto
+mosquitto_sub -v -t 'topic/test'
+mosquitto_pub -t 'topic/test' -m 'helloWorld'
+===================================================================================

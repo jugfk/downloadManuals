@@ -1,0 +1,20 @@
+=================================================================================
+How To Start Headless on Jetson Nano:
+=================================================================================
+free -m
+sudo apt install screenfetch
+systemctl get-default
+sudo systemctl set-default multi-user.target
+sudo reboot
+
+screenfetch
+free -m
+stratx
+sudo systemctl set-default graphical.target
+sudo reboot
+
+- Connect WiFi on CLI:
+nmcli connection show
+nmcli device wifi list
+sudo nmcli device wifi connect GCAMP0824G password 12345678a
+=================================================================================

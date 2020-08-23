@@ -1,0 +1,21 @@
+=================================================================
+How To Maximize GPU & CPU on Jetson Nano:
+=================================================================
+(1) Improving & checking  CPU & GPU:
+sudo jetson_clocks
+sudo jetson_clocks --show
+
+(2) Changing power mode from 5W to MAXN(10W):
+sudo nvpmodel -m 1
+sudo nvpmodel -m 0
+
+(3) Using Tegrastats
+tegrastats
+tegrastats --interval 5000
+
+(4) Checking Jetson Statas
+sudo apt install -y python-pip
+sudo -H pip install jetson-stats
+sudo jtop
+
+=================================================================

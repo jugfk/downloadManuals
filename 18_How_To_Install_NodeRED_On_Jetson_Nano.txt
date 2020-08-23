@@ -1,0 +1,37 @@
+=======================================================================================================
+How To Install Node-RED on Jetson Nano:
+=======================================================================================================
+(1) Native base
+sudo apt install -y nodejs
+sudo apt install -y npm
+sudo npm install -g --unsafe-perm node-red
+node -v
+npm -v
+
+node-red
+Ctrl + C (Quit) 
+
+wget https://raw.githubusercontent.com/jetsonworld/javascript-thermal-monitor/master/flows.json
+
+cd .node-red
+npm install node-red-dashboard
+
+cd
+node-red
+
+======================================================================================================
+(2) Docker base
+# Run Node-RED on Docker Container
+sudo docker run -it -p 1880:1880 --name mynodered nodered/node-red
+wget https://raw.githubusercontent.com/jetsonworld/javascript-thermal-monitor/master/flows.json
+sudo docker images
+sudo docker ps
+
+# If you need to restart the container (e.g. after a reboot or restart of the Docker daemon):
+sudo docker start mynodered
+sudo docker stop mynodered
+
+# To reattach to the terminal (to see logging) run:
+sudo docker attach mynodered
+
+======================================================================================================

@@ -1,0 +1,47 @@
+=======================================================================
+How To Confgiure GPIO On Jetson Nano:
+=======================================================================
+Pin map for Jetson Nano:
+-------------------------------------------------------------------
+        (Inside: FAN)
+    02 04 06 08 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 
+    01 03 05 07 09 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39
+        (Outside: Right)
+-------------------------------------------------------------------
+(1) 3V3:  1,17
+(2) 5V:   02,04  
+(3) GND:  6,9,14,20,25,30,34,39  
+=======================================================================
+
+(1) Install & Download(Git Cloning)
+sudo apt-get update
+sudo apt-get install -y python-pip
+sudo apt-get install -y python3-pip
+git clone https://github.com/NVIDIA/jetson-gpio.git
+cd jetson-gpio
+sudo python3 setup.py install
+
+(3) Set user permissions:
+cd
+sudo groupadd -f -r gpio
+sudo usermod -a -G gpio ubuntu
+
+(6) Excute the sample:
+cd jetson-gpio/samples
+python3 simple_out.py
+
+(7) Excute another sample:
+python3
+>>> import Jetson.GPIO as GPIO
+>>> GPIO.VERSION
+>>> GPIO.setmode(GPIO.BOARD)
+>>> GPIO.setup(33, GPIO.OUT)
+>>> GPIO.output(33, GPIO.HIGH)
+>>> GPIO.output(33, GPIO.LOW)
+
+
+- References: 
+https://pypi.org/project/Jetson.GPIO/
+http://www.waveshare.net/study/article-882-1.html
+https://ahnbk.com/?p=638
+=======================================================================
