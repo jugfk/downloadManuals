@@ -1,0 +1,133 @@
+===========================================================================================================
+How To Install JetBot ROS
+Jetpack 4.3
+===========================================================================================================
+(1) Install ROS Melodic
+# enable all Ubuntu packages:
+sudo apt-add-repository universe
+sudo apt-add-repository multiverse
+sudo apt-add-repository restricted
+
+# add ROS repository to apt sources
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+# install ROS Base
+sudo apt-get update
+sudo apt-get install ros-melodic-ros-base
+
+# add ROS paths to environment
+sudo sh -c 'echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc'
+
+# install catkin tools
+sudo apt-get install python-catkin-tools
+
+-----------------------------------------------------------------------------------------------------------
+(2) Install Adafruit Libraries
+# pip should be installed
+sudo apt-get install python-pip
+
+# install Adafruit libraries
+sudo pip2 install Adafruit-MotorHAT
+sudo pip2 install Adafruit-SSD1306
+
+#Grant your user access to the i2c bus:
+sudo usermod -aG i2c $USER
+sudo reboot
+
+-----------------------------------------------------------------------------------------------------------
+(3) Create catkin workspace
+# create the catkin workspace
+mkdir -p ~/workspace/catkin_ws/src
+cd ~/workspace/catkin_ws
+catkin_make
+
+# add catkin_ws path to bashrc
+sudo sh -c 'echo "source ~/workspace/catkin_ws/devel/setup.bash" >> ~/.bashrc'
+
+# verify
+echo $ROS_PACKAGE_PATH /home/jetbot/workspace/catkin_ws/src:/opt/ros/melodic/share
+
+-----------------------------------------------------------------------------------------------------------
+(4) Build jetson-inference
+# git and cmake should be installed
+sudo apt-get install git cmake
+
+# clone the repo and submodules
+cd ~/workspace
+git clone https://github.com/dusty-nv/jetson-inference
+cd jetson-inference
+git submodule update --init
+
+# build from source
+mkdir build
+cd build
+cmake ../
+make
+
+# install libraries
+sudo make install
+
+------------------------------------------------------------------------------------------------------------
+(5) Build ros_deep_learning
+# install dependencies
+sudo apt-get install ros-melodic-vision-msgs ros-melodic-image-transport ros-melodic-image-publisher
+
+# clone the repo
+cd ~/workspace/catkin_ws/src
+git clone https://github.com/dusty-nv/ros_deep_learning
+
+# make ros_deep_learning
+cd ../    # cd ~/workspace/catkin_ws
+catkin_make
+
+# confirm that the package can be found
+rospack find ros_deep_learning /home/jetbot/workspace/catkin_ws/src/ros_deep_learning
+
+-----------------------------------------------------------------------------------------------------------
+(6) Build jetbot_ros
+# clone the repo
+cd ~/workspace/catkin_ws/src
+git clone https://github.com/dusty-nv/jetbot_ros
+
+# build the package
+cd ../    # cd ~/workspace/catkin_ws
+catkin_make
+
+# confirm that jetbot_ros package can be found
+rospack find jetbot_ros /home/jetbot/workspace/catkin_ws/src/jetbot_ros
+
+-----------------------------------------------------------------------------------------------------------
+(7) Testing JetBot
+# First open a new terminal
+roscore
+# Open another terminal
+rosrun jetbot_ros jetbot_motors.py
+
+# Test Motor Commands
+rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "forward"
+rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "backward"
+rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "left"
+rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "right"
+rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "stop"
+
+-----------------------------------------------------------------------------------------------------------
+(8) Using the Debug OLED
+rosrun jetbot_ros jetbot_oled.py
+rostopic pub /jetbot_oled/user_text std_msgs/String --once "HELLO!"
+
+-----------------------------------------------------------------------------------------------------------
+(9) Using the Camera
+rosrun jetbot_ros jetbot_camera
+# first open a new terminal
+sudo apt-get install ros-melodic-image-view
+rosrun image_view image_view image:=/jetbot_camera/raw
+
+(10) Using Gazebo
+cd jetbot_ros/gazebo
+./install_jetbot_model.sh
+
+# References:
+https://github.com/dusty-nv/jetbot_ros
+https://robertchoi.gitbook.io/jetbot/6-ros
+===========================================================================================================
