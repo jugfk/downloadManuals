@@ -2,7 +2,7 @@
 How To Download vimrc For vi editor:
 =======================================================================
 cd
-wget https://raw.githubusercontent.com/jetsonworld/vimrc/master/01_fille/remove.vimrc
+wget https://raw.githubusercontent.com/jugfk/vimrc/master/01_fille/remove.vimrc
 mv remove.vimrc .vimrc
 ls -a
 cat .vimrc
