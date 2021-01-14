@@ -1,7 +1,7 @@
 ======================================================================================
 How To Set up & imprement ROS on Jetson Nano:
 ======================================================================================
-git clone https://github.com/jetsonworld/installROS.git
+git clone https://github.com/jugfk/installROS.git
 cd installROS
 sh install-ros.sh
 roscore
