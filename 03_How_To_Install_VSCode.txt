@@ -3,14 +3,11 @@ How To Install VSCode on Jetson Nano:
 ===========================================================================
 cd
 
-(1) Git clone:
-git clone https://github.com/jetsonworld/installVSCode.git
-cd installVSCode
+(1) Download the deb file:
+wget https://github.com/toolboc/vscode/releases/download/1.32.3/code-oss_1.32.3-arm64.deb
 
 (2) Install:
-sh installVSCode.sh
-(Or)
-./installVSCode.sh
+sudo dpkg -i code-oss_1.32.3-arm64.deb
 
 (3) Excute:
 code-oss
