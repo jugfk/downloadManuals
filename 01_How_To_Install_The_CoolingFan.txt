@@ -16,7 +16,7 @@ How To Install The Fan Driver:
 ==========================================================================
 sudo apt update
 sudo apt install -y python3-dev
-git clone https://github.com/jetsonworld/jetson-fan-ctl.git
+git clone https://github.com/jugfk/jetson-fan-ctl.git
 cd jetson-fan-ctl/
 sudo sh install.sh
 
