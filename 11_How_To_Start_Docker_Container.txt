@@ -54,6 +54,10 @@ sudo docker events
 sudo docker info
 # Docker STATS
 sudo docker stats
+# Remove one or more containers
+sudo docker rm
+# Remove one or more images
+sudo docker rmi
 
 # References:
 https://docs.docker.com/engine/reference/commandline/
@@ -64,4 +68,5 @@ https://github.com/NVIDIA/nvidia-docker/wiki/NVIDIA-Container-Runtime-on-Jetson
 https://docs.docker.com/compose/gettingstarted/
 https://blog.hypriot.com/post/nvidia-jetson-nano-install-docker-compose/
 https://collabnix.com/why-docker-19-03-on-nvidia-jetson-nano/
+https://knight76.tistory.com/entry/docker-docker-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%82%AD%EC%A0%9C
 ================================================================================================
