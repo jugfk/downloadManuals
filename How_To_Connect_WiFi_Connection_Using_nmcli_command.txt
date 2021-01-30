@@ -1,0 +1,18 @@
+=======================================================================
+How_To_Connect_WiFi_Connection_Using_nmcli_command:
+=======================================================================
+1. You can first check if you want a wireless adapter on your system.
+nmcli device
+
+2. Then you can list all the wirelss networks (SSDI) in the area.
+nmcli device wifi list
+
+3. To connect to your wireless network (AP, access point)
+sudo nmcli device wifi connect <MY_WIFI_AP> password <MY_WIFI_PASSWORD>
+sudo nmcli device wifi connect iPhone7_leehaesung password l24482448
+sudo nmcli device wifi connect elite 5F password elite1234
+
+4. Check IP address:
+ifconfig
+
+=======================================================================
