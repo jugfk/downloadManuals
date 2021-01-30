@@ -12,5 +12,4 @@ sudo nmcli device wifi connect <MY_WIFI_AP> password <MY_WIFI_PASSWORD>
 
 4. Check IP address:
 ifconfig
-
 =======================================================================
