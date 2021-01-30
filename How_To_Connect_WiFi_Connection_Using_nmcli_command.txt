@@ -9,8 +9,6 @@ nmcli device wifi list
 
 3. To connect to your wireless network (AP, access point)
 sudo nmcli device wifi connect <MY_WIFI_AP> password <MY_WIFI_PASSWORD>
-sudo nmcli device wifi connect iPhone7_leehaesung password l24482448
-sudo nmcli device wifi connect elite 5F password elite1234
 
 4. Check IP address:
 ifconfig
