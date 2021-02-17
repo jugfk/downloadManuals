@@ -3,7 +3,6 @@ How To Install Jupyter Notebook & Jupyterlab on Jetson Nano:
 ============================================================================
 sudo apt update
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python2 get-pip.py
 sudo python3 get-pip.py
 
 sudo apt install -y python3-pip
