@@ -1,6 +1,9 @@
 ==============================================================================================
 How To check Jetson Release:
 ==============================================================================================
+- Check it
+sudo apt-cache show nvidia-jetpack
+
 - Install jetson-stats
 sudo -H pip install jetson-stats
 - Update jetson-stats
