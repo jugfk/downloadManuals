@@ -2,7 +2,7 @@
 How To Install PyTorch On Jetson Nano:
 Tested on Jetson Nano(2GB): Jetpack 4.4.1 [L4T 32.4.4]
 ==================================================================================================
-- PyTorch v1.4.0
+- PyTorch v1.6.0
 -  Python 3.6
 sudo apt-get install libopenmpi2
 wget  https://nvidia.box.com/shared/static/9eptse6jyly1ggt9axbja2yrmj6pbarc.whl -O torch-1.6.0-cp36-cp36m-linux_aarch64.whl
