@@ -9,8 +9,8 @@ sudo apt install -y python3-pip
 sudo apt install -y python3-pil
 sudo apt install -y python-pip
 sudo apt install -y python-pil
-sudo pip3 install --upgrade numpy
-sudo pip2 install --upgrade numpy
+sudo pip3 install numpy
+sudo pip2 install numpy
 
 sudo apt install -y nodejs
 sudo apt install -y npm
