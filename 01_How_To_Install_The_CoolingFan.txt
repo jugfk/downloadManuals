@@ -1,6 +1,8 @@
 ==========================================================================
  How To Turn On the fan for Jetson Nano:
+ Tested On Jetson Nano(2GB,4GB), Jetson Xavier NX
 ==========================================================================
+# Testing
 sudo jetson_clocks
 
 ON : 
