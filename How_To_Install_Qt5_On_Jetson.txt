@@ -1,0 +1,12 @@
+============================================================================================
+How To Install Qt5 On Jetson Nano(2GB, 4GB), Jetson Xavier NX:
+============================================================================================
+sudo apt update
+sudo apt -y install qt5-default
+sudo apt -y install qtcreator
+sudo apt -y install qtdeclarative5-dev
+
+# References:
+https://www.facebook.com/groups/jugfk/permalink/864050531081900
+https://qengineering.eu/install-qt5-with-opencv-on-raspberry-pi-4.html
+============================================================================================
