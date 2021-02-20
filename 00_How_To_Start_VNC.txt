@@ -1,14 +1,14 @@
 ==========================================================================================
 How To Use RealVNC on Mac,Windows, and Linux:
 ==========================================================================================
-1. Enable the VNC server to start each time you log in
-If you have a Jetson Nano 2GB Developer Kit (running LXDE):
-mkdir -p ~/.config/autostart
-cp /usr/share/applications/vino-server.desktop ~/.config/autostart/.
-
-For all other Jetson developer kits (running GNOME):
+1. All Jetson Kits (running GNOME):
 cd /usr/lib/systemd/user/graphical-session.target.wants
 sudo ln -s ../vino-server.service ./.
+
+[Option] If you have the "Jetson Nano 2GB" Developer Kit (running LXDE): 
+Enable the VNC server to start each time you log in
+mkdir -p ~/.config/autostart
+cp /usr/share/applications/vino-server.desktop ~/.config/autostart/.
 
 2. Configure the VNC server:
 gsettings set org.gnome.Vino prompt-enabled false
