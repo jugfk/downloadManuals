@@ -5,16 +5,19 @@ CUDA: 10.2
 ===========================================================================================================
 sudo apt update
 cd /usr/local/
+# Check the cuda version
 ls
--Check the cuda version
 export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 cd
+
+# Download the Official Darknet
 git clone https://github.com/AlexeyAB/darknet
 cd darknet
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
 
+# Modifi the Makefile
 sudo vi Makefile
 ---------------------------------------------------------------
 GPU=1
@@ -24,7 +27,7 @@ OPENCV=1
 make
 
 ==========================================================================================================
-- Excute YOLO:
+# Excute YOLO:
 cd darknet
 ./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg
 
@@ -32,7 +35,7 @@ cd darknet
 ./darknet detect cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg
 
 ==========================================================================================================
-- References:
+# References:
 https://github.com/AlexeyAB/darknet
-https://wendys.tistory.com/143?fbclid=IwAR3F_bEJnIoREajvQqrHO51pHxLu0fN-rPbq7VHxnkjKX7G4WUGfgt1DH50
+ttps://wendys.tistory.com/143?fbclid=IwAR3F_bEJnIoREajvQqrHO51pHxLu0fN-rPbq7VHxnkjKX7G4WUGfgt1DH50
 ===========================================================================================================
