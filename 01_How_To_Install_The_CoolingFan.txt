@@ -2,7 +2,7 @@
  How To Turn On the fan for Jetson Nano:
  Tested On Jetson Nano(2GB,4GB), Jetson Xavier NX
 ==========================================================================
-# Testing
+# Test
 sudo jetson_clocks
 
 ON : 
@@ -10,9 +10,9 @@ sudo sh -c 'echo 255 > /sys/devices/pwm-fan/target_pwm'
 sudo sh -c 'echo 127 > /sys/devices/pwm-fan/target_pwm' 
 sudo sh -c 'echo 63 > /sys/devices/pwm-fan/target_pwm'
 
-
 OFF :
 sudo sh -c 'echo 0 > /sys/devices/pwm-fan/target_pwm' 
+
 ==========================================================================
 How To Install The Fan Driver:
 ==========================================================================
