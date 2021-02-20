@@ -1,6 +1,8 @@
 # Checking Versions
 # Date: 11th March 2018
 # Edited by Lee, Stephen 
+# How To Use:  
+# python3 check_versions_of_TF_Keras_Pytorch.py
 
 import os
 
