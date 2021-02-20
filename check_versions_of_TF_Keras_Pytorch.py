@@ -54,5 +54,7 @@ os.system("python3 -c 'import sklearn; print(sklearn.__version__)' ")
 print("--------------------------------------------")
 print("Jupyter-notebook Version: ")
 os.system('jupyter notebook --version')
+print("--------------------------------------------")
+print("OpenCV Version: ")
+os.system("python3 -c 'import cv2; print(cv2.__version__)' ")
 print("------------------E N D---------------------")
-
