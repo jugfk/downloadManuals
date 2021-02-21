@@ -79,7 +79,7 @@ cmake         -D WITH_CUDA=ON \
 
 7. Compile the OpenCV with Contribs Modules:
 (4 Hours ~)
-make -j6
+make -j4
 sudo make install
 sudo ldconfig
 ===========================================================================================================
