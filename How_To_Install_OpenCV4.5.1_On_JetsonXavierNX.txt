@@ -40,6 +40,7 @@ cd build
 
 6. Build Opencv using Cmake:
 cmake         -D WITH_CUDA=ON \
+        -D ENABLE_PRECOMPILED_HEADERS=OFF \
         -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.5.1/modules \
         -D WITH_GSTREAMER=ON \
         -D WITH_LIBV4L=ON \
