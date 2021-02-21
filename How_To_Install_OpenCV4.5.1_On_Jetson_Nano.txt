@@ -32,6 +32,7 @@ cd build
 cmake     -D WITH_CUDA=ON \
         -D ENABLE_PRECOMPILED_HEADERS=OFF \        
         -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.5.1/modules \
+        -D EIGEN_INCLUDE_PATH=/usr/include/eigen3 \
         -D WITH_GSTREAMER=ON \
         -D WITH_LIBV4L=ON \
         -D BUILD_opencv_python2=ON \
