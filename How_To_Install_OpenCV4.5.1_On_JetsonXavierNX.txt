@@ -76,7 +76,7 @@ cmake         -D WITH_CUDA=ON \
         -D BUILD_NEW_PYTHON_SUPPORT=ON \
         -D BUILD_opencv_python3=TRUE \
         -D OPENCV_GENERATE_PKGCONFIG=ON \
-        -D BUILD_EXAMPLES=ON ..           
+        -D BUILD_EXAMPLES=OFF ..           
 
 7. Compile the OpenCV with Contribs Modules:
 (2 ~ 5 Hours)
