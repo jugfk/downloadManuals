@@ -28,6 +28,7 @@ print("--------------------------------------------")
 print("JetPack version: ")
 print("--------------------------------------------")
 os.system('sudo apt-cache show nvidia-jetpack')
+print("--------------------------------------------")
 
 print("")
 print("--------------------------------------------")
@@ -64,3 +65,6 @@ print("--------------------------------------------")
 print("OpenCV Version: ")
 os.system("python3 -c 'import cv2; print(cv2.__version__)' ")
 print("------------------E N D---------------------")
+
+# References:
+# https://forums.developer.nvidia.com/t/how-to-check-the-jetpack-version/69549
