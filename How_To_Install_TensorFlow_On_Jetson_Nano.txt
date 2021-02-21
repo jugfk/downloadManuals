@@ -12,6 +12,8 @@ sudo pip3 install -U pip testresources setuptools
 # install the following python packages
 sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 enum34 futures protobuf
 
+# ------------------------------------------------------------------------------------------------------------------------------
+# JetPack 4.4 & 4.4.1
 # install TensorFlow 1.15 For JetPack 4.4, 4.4.1:
 # sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 'tensorflow<2'
 
@@ -19,12 +21,14 @@ sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_
 # sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
 
 # ------------------------------------------------------------------------------------------------------------------------------
+# JetPack 4.5
 # install TensorFlow 1.15 For JetPack 4.5:
 # sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 'tensorflow<2'
 
 # or install TensorFlow 2.0 For JetPack 4.5
 sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 tensorflow
 
+# ------------------------------------------------------------------------------------------------------------------------------
 # Check the TensorFlow Version
 python3 -c 'import tensorflow as tf; print(tf.__version__)'
 
