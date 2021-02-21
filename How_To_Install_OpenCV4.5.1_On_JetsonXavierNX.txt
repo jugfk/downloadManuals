@@ -1,0 +1,84 @@
+===================================================================================
+How To Install OpneCV 4.5.1 on Jetson:
+Update Date: 2/21 2021
+===================================================================================
+- OpenCV 4.5.1
+1. Updating the packages:
+sudo sh -c "echo '/usr/local/cuda/lib64' >> /etc/ld.so.conf.d/nvidia-tegra.conf"
+sudo apt update
+sudo apt install -y qt5-default
+sudo apt install -y build-essential cmake git unzip pkg-config libswscale-dev
+sudo apt install -y python-dev python3-dev python-numpy python3-numpy python3-pip
+sudo apt install -y libcanberra-gtk* libgtk2.0-dev
+sudo apt install -y libtbb2 libtbb-dev libavresample-dev libvorbis-dev libxine2-dev 
+sudo apt install -y curl
+
+2. Install video & image formats:
+sudo apt install -y libxvidcore-dev libx264-dev libgtk-3-dev
+sudo apt install -y libjpeg-dev libpng-dev libtiff-dev
+sudo apt install -y libmp3lame-dev libtheora-dev libfaac-dev libopencore-amrnb-dev
+sudo apt install -y libopencore-amrwb-dev libopenblas-dev libatlas-base-dev
+sudo apt install -y libblas-dev liblapack-dev libeigen3-dev libgflags-dev 
+sudo apt install -y protobuf-compiler libprotobuf-dev libgoogle-glog-dev  
+sudo apt install -y libavcodec-dev libavformat-dev gfortran libhdf5-dev
+sudo apt install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+sudo apt install -y libv4l-dev v4l-utils qv4l2 v4l2ucp libdc1394-22-dev
+
+3. Download OpenCV & Contribs Modules:
+curl -L https://github.com/opencv/opencv/archive/4.5.1.zip -o opencv-4.5.1.zip
+curl -L https://github.com/opencv/opencv_contrib/archive/4.5.1.zip -o opencv_contrib-4.5.1.zip
+
+4. Unzipping packages:
+unzip opencv-4.5.1.zip 
+unzip opencv_contrib-4.5.1.zip 
+cd opencv-4.5.1/
+
+5. Create directory:
+mkdir build
+cd build
+
+6. Build Opencv using Cmake:
+cmake         -D WITH_CUDA=ON \
+        -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.5.1/modules \
+        -D WITH_GSTREAMER=ON \
+        -D WITH_LIBV4L=ON \
+        -D BUILD_opencv_python2=ON \
+        -D BUILD_opencv_python3=ON \
+        -D BUILD_TESTS=OFF \
+        -D BUILD_PERF_TESTS=OFF \
+        -D BUILD_EXAMPLES=OFF \
+        -D CMAKE_BUILD_TYPE=RELEASE \
+        -D CMAKE_INSTALL_PREFIX=/usr/local \
+        -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.5.1/modules \
+        -D EIGEN_INCLUDE_PATH=/usr/include/eigen3 \
+        -D CUDA_ARCH_BIN=5.3 \
+        -D CUDA_ARCH_PTX="" \
+        -D WITH_CUDNN=ON \
+        -D WITH_CUBLAS=ON \
+        -D ENABLE_FAST_MATH=ON \
+        -D CUDA_FAST_MATH=ON \
+        -D OPENCV_DNN_CUDA=ON \
+        -D ENABLE_NEON=ON \
+        -D WITH_QT=OFF \
+        -D WITH_OPENMP=ON \
+        -D WITH_OPENGL=ON \
+        -D BUILD_TIFF=ON \
+        -D WITH_FFMPEG=ON \
+        -D WITH_TBB=ON \
+        -D BUILD_TBB=ON \
+        -D WITH_EIGEN=ON \
+        -D WITH_V4L=ON \
+        -D OPENCV_ENABLE_NONFREE=ON \
+        -D INSTALL_C_EXAMPLES=ON \
+        -D INSTALL_PYTHON_EXAMPLES=ON \
+        -D BUILD_NEW_PYTHON_SUPPORT=ON \
+        -D BUILD_opencv_python3=TRUE \
+        -D OPENCV_GENERATE_PKGCONFIG=ON \
+        -D BUILD_EXAMPLES=ON ..           
+
+7. Compile the OpenCV with Contribs Modules:
+(2 Hours)
+make -j6
+sudo make install
+sudo ldconfig
+===========================================================================================================
