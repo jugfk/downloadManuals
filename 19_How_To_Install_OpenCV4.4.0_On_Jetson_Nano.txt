@@ -35,6 +35,8 @@ cd build
 6. Build Opencv using Cmake:
 cmake     -D WITH_CUDA=ON \
         -D CUDA_ARCH_BIN="5.3" \
+        -D CUDA_ARCH_PTX="" \
+        -D ENABLE_PRECOMPILED_HEADERS=OFF \
         -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.4.0/modules \
         -D WITH_GSTREAMER=ON \
         -D WITH_LIBV4L=ON \
@@ -48,7 +50,7 @@ cmake     -D WITH_CUDA=ON \
 
 
 7. Compile the OpenCV with Contribs Modules:
-(2 Hours)
+(4 Hours ~)
 make -j4
 sudo make install
 ===========================================================================================================
