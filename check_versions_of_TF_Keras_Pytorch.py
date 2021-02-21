@@ -25,6 +25,12 @@ os.system('pip3 -V')
 
 print("")
 print("--------------------------------------------")
+print("JetPack version: ")
+print("--------------------------------------------")
+os.system('sudo apt-cache show nvidia-jetpack')
+
+print("")
+print("--------------------------------------------")
 print("Deep Learning Frameworks: ")
 print("--------------------------------------------")
 print("TensorFlow Version: ")
