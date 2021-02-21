@@ -53,8 +53,16 @@ cmake     -D WITH_CUDA=ON \
         -D WITH_OPENGL=ON \
         -D BUILD_TIFF=ON \
         -D WITH_FFMPEG=ON \
+        -D WITH_TBB=ON \
+        -D BUILD_TBB=ON \
+        -D WITH_EIGEN=ON \
+        -D WITH_V4L=ON \
+        -D OPENCV_ENABLE_NONFREE=ON \
+        -D INSTALL_C_EXAMPLES=OFF \
+        -D INSTALL_PYTHON_EXAMPLES=OFF \
+        -D BUILD_opencv_python3=TRUE \
+        -D OPENCV_GENERATE_PKGCONFIG=ON \
         -D CMAKE_INSTALL_PREFIX=/usr/local ..
-
 
 7. Compile the OpenCV with Contribs Modules:
 (2 Hours)
