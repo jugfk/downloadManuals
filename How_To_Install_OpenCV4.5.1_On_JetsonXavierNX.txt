@@ -1,7 +1,7 @@
 ===================================================================================
 How To Install OpneCV 4.5.1 on Jetson Xavier NX:
 Update Date: 2/21 2021
-Only Avaiable Jetson Xavier NX
+Only Available 'Jetson Xavier NX'
 ===================================================================================
 - OpenCV 4.5.1
 1. Update the packages:
