@@ -52,7 +52,7 @@ cmake         -D WITH_CUDA=ON \
         -D CMAKE_INSTALL_PREFIX=/usr/local \
         -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.5.1/modules \
         -D EIGEN_INCLUDE_PATH=/usr/include/eigen3 \
-        -D CUDA_ARCH_BIN=5.3 \
+        -D CUDA_ARCH_BIN="7.2" \.
         -D CUDA_ARCH_PTX="" \
         -D WITH_CUDNN=ON \
         -D WITH_CUBLAS=ON \
@@ -78,7 +78,7 @@ cmake         -D WITH_CUDA=ON \
         -D BUILD_EXAMPLES=ON ..           
 
 7. Compile the OpenCV with Contribs Modules:
-(2 Hours)
+(2 ~ 5 Hours)
 make -j6
 sudo make install
 sudo ldconfig
