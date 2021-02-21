@@ -18,6 +18,6 @@ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/
 sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
 
 # References:
-How_To_Install_TensorFlow_On_Jetson_Nano.txt
+https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770
 https://elinux.org/Jetson_Zoo
 ============================================================================================
