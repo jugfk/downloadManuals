@@ -1,5 +1,6 @@
 # =============================================================================================================================
-# How To Install TensorFlow on Jetson Nano:
+# How To Install TensorFlow on Jetson Nano, Jetson Xavier NX:
+# Update Date: 21st Feb. 2021
 # =============================================================================================================================
 # install prerequisites
 sudo apt-get install -y libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
@@ -9,7 +10,7 @@ sudo apt-get install -y python3-pip
 sudo pip3 install -U pip testresources setuptools
 
 # install the following python packages
-# sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 enum34 futures protobuf
+sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 keras_preprocessing==1.0.5 keras_applications==1.0.8 gast==0.2.2 enum34 futures protobuf
 
 # install TensorFlow 1.15 For JetPack 4.4, 4.4.1:
 # sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 'tensorflow<2'
@@ -23,6 +24,9 @@ sudo pip3 install -U pip testresources setuptools
 
 # or install TensorFlow 2.0 For JetPack 4.5
 sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 tensorflow
+
+# Check the TensorFlow Version
+python3 -c 'import tensorflow as tf; print(tf.__version__)'
 
 # References:
 # https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770
