@@ -16,6 +16,9 @@ sudo apt install -y python3-pip libopenblas-base
 sudo pip3 install Cython
 sudo pip3 install numpy torch-1.6.0-cp36-cp36m-linux_aarch64.whl
 
+# Check PyTorch Version on Terminal
+python3 -c 'import torch; print(torch.__version__)'
+
 # Reference:
 # https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-7-0-now-available/72048
 # ==================================================================================================
