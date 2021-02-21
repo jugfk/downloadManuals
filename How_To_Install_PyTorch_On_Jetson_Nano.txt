@@ -1,10 +1,9 @@
-==================================================================================================
-How To Install PyTorch On Jetson Nano:
-Tested on Jetson Nano(2GB), Xavier NX: 
-JetPack 4.4(L4T R32.4.3) / JetPack 4.4.1(L4T R32.4.4) / JetPack 4.5(L4T R32.5.0)
-==================================================================================================
-- PyTorch v1.6.0
--  Python 3.6
+# ==================================================================================================
+# How To Install PyTorch On Jetson Nano(2GB), Xavier NX: 
+# JetPack 4.4(L4T R32.4.3) / JetPack 4.4.1(L4T R32.4.4) / JetPack 4.5(L4T R32.5.0)
+# ==================================================================================================
+# PyTorch v1.6.0
+# Python 3.6
 sudo apt update
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
@@ -12,11 +11,11 @@ sudo apt install -y python3-pip
 sudo apt install -y python3-pil
 
 sudo apt install -y libopenmpi2
-wget  https://nvidia.box.com/shared/static/9eptse6jyly1ggt9axbja2yrmj6pbarc.whl -O torch-1.6.0-cp36-cp36m-linux_aarch64.whl
+wget https://nvidia.box.com/shared/static/9eptse6jyly1ggt9axbja2yrmj6pbarc.whl -O torch-1.6.0-cp36-cp36m-linux_aarch64.whl
 sudo apt install -y python3-pip libopenblas-base
 sudo pip3 install Cython
 sudo pip3 install numpy torch-1.6.0-cp36-cp36m-linux_aarch64.whl
 
-Reference:
-https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-7-0-now-available/72048
-==================================================================================================
+# Reference:
+# https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-7-0-now-available/72048
+# ==================================================================================================
