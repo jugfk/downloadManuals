@@ -5,9 +5,9 @@ Only Available 'Jetson Xavier NX'
 ===================================================================================
 - OpenCV 4.5.1
 1. Update the packages:
+sudo apt update
 sudo apt install -y python3-pip python-dev python3-dev python-numpy python3-numpy 
 sudo sh -c "echo '/usr/local/cuda/lib64' >> /etc/ld.so.conf.d/nvidia-tegra.conf"
-sudo apt update
 sudo apt install -y qt5-default
 sudo apt install -y build-essential cmake git unzip pkg-config libswscale-dev
 sudo apt install -y libcanberra-gtk* libgtk2.0-dev
