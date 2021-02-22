@@ -28,7 +28,7 @@ sudo apt install -y libv4l-dev v4l-utils qv4l2 v4l2ucp libdc1394-22-dev
 curl -L https://github.com/opencv/opencv/archive/4.5.1.zip -o opencv-4.5.1.zip
 curl -L https://github.com/opencv/opencv_contrib/archive/4.5.1.zip -o opencv_contrib-4.5.1.zip
 
-4. Unz packages:
+4. Unzip packages:
 unzip opencv-4.5.1.zip 
 unzip opencv_contrib-4.5.1.zip 
 cd opencv-4.5.1/
