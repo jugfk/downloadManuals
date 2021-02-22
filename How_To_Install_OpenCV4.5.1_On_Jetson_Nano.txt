@@ -1,9 +1,9 @@
-===================================================================================
-How To Install OpneCV 4.5.1 on Jetson Nano(2GB, 4GB):
-Update Date: 21st Feb. 2021
-===================================================================================
-- OpenCV 4.5.1
-1. Update the packages:
+# ===================================================================================
+# How To Install OpneCV 4.5.1 on Jetson Nano(2GB, 4GB):
+# Update Date: 21st Feb. 2021
+# ===================================================================================
+# OpenCV 4.5.1
+# 1. Update the packages:
 sudo apt update
 sudo apt install -y python3-pip python-dev python3-dev python-numpy python3-numpy 
 sudo sh -c "echo '/usr/local/cuda/lib64' >> /etc/ld.so.conf.d/nvidia-tegra.conf"
@@ -13,7 +13,7 @@ sudo apt install -y libcanberra-gtk* libgtk2.0-dev
 sudo apt install -y libtbb2 libtbb-dev libavresample-dev libvorbis-dev libxine2-dev 
 sudo apt install -y curl
 
-2. Install math, video & image formats:
+# 2. Install math, video & image formats:
 sudo apt install -y libxvidcore-dev libx264-dev libgtk-3-dev
 sudo apt install -y libjpeg-dev libpng-dev libtiff-dev
 sudo apt install -y libmp3lame-dev libtheora-dev libfaac-dev libopencore-amrnb-dev
@@ -24,20 +24,20 @@ sudo apt install -y libavcodec-dev libavformat-dev gfortran libhdf5-dev
 sudo apt install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 sudo apt install -y libv4l-dev v4l-utils qv4l2 v4l2ucp libdc1394-22-dev
 
-3. Download OpenCV & Contribs Modules:
+# 3. Download OpenCV & Contribs Modules:
 curl -L https://github.com/opencv/opencv/archive/4.5.1.zip -o opencv-4.5.1.zip
 curl -L https://github.com/opencv/opencv_contrib/archive/4.5.1.zip -o opencv_contrib-4.5.1.zip
 
-4. Unzip packages:
+# 4. Unzip packages:
 unzip opencv-4.5.1.zip 
 unzip opencv_contrib-4.5.1.zip 
 cd opencv-4.5.1/
 
-5. Create the build directory:
+# 5. Create the build directory:
 mkdir build
 cd build
 
-6. Build Opencv using Cmake:
+# 6. Build Opencv using Cmake:
 cmake         -D WITH_CUDA=ON \
         -D ENABLE_PRECOMPILED_HEADERS=OFF \
         -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.5.1/modules \
@@ -77,7 +77,7 @@ cmake         -D WITH_CUDA=ON \
         -D OPENCV_GENERATE_PKGCONFIG=ON \
         -D BUILD_EXAMPLES=OFF ..           
 
-7. Compile the OpenCV with Contribs Modules:
+# 7. Compile the OpenCV with Contribs Modules:
 # Jetson Xavier NX: 1~2 Hours
 # Jetson Nano 4GB: 2~3 Hours
 # Jetson Nano 2GB: 6~8 Hours
@@ -85,7 +85,7 @@ make -j4
 sudo make install
 sudo ldconfig
 
-8. Check the OpenCV Version on Terminal:
+# 8. Check the OpenCV Version on Terminal:
 python3 -c 'import cv2; print(cv2.__version__)'
 
 # References
