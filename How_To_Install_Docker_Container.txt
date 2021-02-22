@@ -1,5 +1,5 @@
 ================================================================================
-How To Start Docker Container on Jetson Nano:
+How To Install Docker Container on Jetson Nano:
 ================================================================================
 # step 1, install Python PIP
 $ sudo apt-get update -y
