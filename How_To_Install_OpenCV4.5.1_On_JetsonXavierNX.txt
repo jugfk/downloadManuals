@@ -83,4 +83,8 @@ cmake         -D WITH_CUDA=ON \
 make -j6
 sudo make install
 sudo ldconfig
+
+# References
+# OpenCV configuration options reference: https://docs.opencv.org/4.5.1/db/d05/tutorial_config_reference.html
+# OpenCV modules: https://docs.opencv.org/4.5.1/
 ===========================================================================================================
