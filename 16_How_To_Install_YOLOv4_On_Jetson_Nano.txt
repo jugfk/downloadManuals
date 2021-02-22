@@ -21,7 +21,7 @@ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optim
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
 
 # Modifi the Makefile
-# sudo vi Makefile
+sudo vi Makefile
 # ---------------------------------------------------------------
 # GPU=1
 # CUDNN=1
