@@ -53,4 +53,11 @@ cmake     -D WITH_CUDA=ON \
 (4 Hours ~)
 make -j4
 sudo make install
+
+8. Check the OpenCV Version on Terminal:
+python3 -c 'import cv2; print(cv2.__version__)'
+
+# References
+# OpenCV configuration options reference: https://docs.opencv.org/4.4.0/db/d05/tutorial_config_reference.html
+# OpenCV modules: https://docs.opencv.org/4.4.0/
 ===========================================================================================================
