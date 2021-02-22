@@ -80,7 +80,7 @@ cmake         -D WITH_CUDA=ON \
 
 7. Compile the OpenCV with Contribs Modules:
    ( Jetson Xavier NX: 1~2.5 Hours )
-   ( Jetson Nano 4GB: 2-3 Hours )
+   ( Jetson Nano 4GB: 2~3 Hours )
    ( Jetson Nano 2GB: 6~8 Hours )
 make -j6
 sudo make install
