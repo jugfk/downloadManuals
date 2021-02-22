@@ -1,5 +1,5 @@
 ======================================================================
-How To Set up SWAP on Jetson Nano:
+How To Set up SWAP on Jetson Nano (2, 4GB), Jetson Xavier NX:
 ======================================================================
 free -m
 swapon -s
