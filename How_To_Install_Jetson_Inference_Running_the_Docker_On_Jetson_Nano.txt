@@ -1,0 +1,32 @@
+=================================================================================================
+How To Start Jetson Inference with Docker On Jetson Nano:
+=================================================================================================
+# Check your webcam device port:
+ls -ltrh /dev/video*
+
+# Let's Start Running:
+cd jetson-inference
+docker/run.sh
+cd build/aarch64/bin
+./video-viewer /dev/video0
+
+# Object Detection
+# Webcam
+./detectnet /dev/video0
+./detectnet images/peds_0.jpg images/test/peds_0.jpg
+
+
+# Image Detection
+# Webcam
+./imagenet /dev/video0
+./imagenet images/jellyfish.jpg images/test/jellyfish.jpg
+# C++
+./imagenet images/orange_0.jpg images/test/output_0.jpg 
+# Python
+./imagenet.py images/orange_0.jpg images/test/output_0.jpg
+
+# (press Ctrl+D to exit the container)
+
+# Reference:
+https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md
+=================================================================================================
