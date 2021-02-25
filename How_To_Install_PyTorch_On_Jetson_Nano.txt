@@ -15,7 +15,7 @@ wget https://nvidia.box.com/shared/static/9eptse6jyly1ggt9axbja2yrmj6pbarc.whl -
 sudo apt install -y python3-pip libopenblas-base
 sudo pip3 install Cython
 sudo pip3 install numpy torch-1.6.0-cp36-cp36m-linux_aarch64.whl
-sudo pip3 isntall torchvision
+sudo pip3 install torchvision
 
 # Check PyTorch Version on Terminal
 python3 -c 'import torch; print(torch.__version__)'
