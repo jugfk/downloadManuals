@@ -38,6 +38,7 @@ python3 imagenet-camera.py /dev/video0
 python3 imagenet-camera.py ./images/dog_0.jpg
 python3 my-detection.py ./images/dog_0.jpg
 
+# (press Ctrl+D to exit the container)
 
 # References
 https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md
