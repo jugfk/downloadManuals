@@ -1,5 +1,6 @@
 =================================================================================================
 How To Start Jetson Inference Running Docker On Jetson Nano & Jetson Xavier NX
+Update Date: Feb. 25th 2021
 =================================================================================================
 # Basic Installation
 sudo apt-get update
