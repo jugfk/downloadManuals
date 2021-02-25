@@ -1,25 +1,39 @@
 =================================================================================================
-How To Start Jetson Inference with Docker On Jetson Nano:
+How To Start Jetson Inference Running Docker On Jetson Nano & Jetson Xavier NX
 =================================================================================================
-# Check your webcam device port:
+# Basic Installation
+sudo apt-get update
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
+sudo apt install -y python3-pip
+sudo apt install -y python3-pil
+sudo apt install -y python-pip
+sudo apt install -y python-pil
+sudo apt-get install git cmake libpython3-dev python3-numpy
+
+# Check  Device Port:
 ls -ltrh /dev/video*
 
-# Let's Start Running:
+# Download
+git clone --recursive https://github.com/dusty-nv/jetson-inference
+git submodule update --init
 cd jetson-inference
 docker/run.sh
 cd build/aarch64/bin
+
+# Test
 ./video-viewer /dev/video0
 
 # Object Detection
-# Webcam
+# USB-camera(webcam)
 ./detectnet /dev/video0
 ./detectnet images/peds_0.jpg images/test/peds_0.jpg
 
-
-# Image Detection
-# Webcam
+# Image Classification
+# USB-camera(webcam)
 ./imagenet /dev/video0
 ./imagenet images/jellyfish.jpg images/test/jellyfish.jpg
+
 # C++
 ./imagenet images/orange_0.jpg images/test/output_0.jpg 
 # Python
