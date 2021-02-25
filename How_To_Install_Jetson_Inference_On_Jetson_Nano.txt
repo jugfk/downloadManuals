@@ -41,6 +41,8 @@ python3 my-detection.py ./images/dog_0.jpg
 
 # References
 https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md
+# S3E1 - Hello AI World Setup: https://youtu.be/QXIwdsyK7Rw
+# S3E2 - Image Classification Inference: https://youtu.be/QatH8iF0Efk
 https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-console-2.md
 https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-example-python-2.md
 https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-example-2.md

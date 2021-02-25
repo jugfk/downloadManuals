@@ -41,6 +41,8 @@ cd build/aarch64/bin
 
 # (press Ctrl+D to exit the container)
 
-# Reference:
-https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md
+# References:
+# https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md
+# S3E1 - Hello AI World Setup: https://youtu.be/QXIwdsyK7Rw
+# S3E2 - Image Classification Inference: https://youtu.be/QatH8iF0Efk
 =================================================================================================
