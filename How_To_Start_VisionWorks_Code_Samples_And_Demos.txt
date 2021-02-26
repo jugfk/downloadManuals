@@ -7,6 +7,43 @@ make
 cd bin/aarch64/linux/release
 ./nvx_demo_feature_tracker
 
+================================================================================================
+How To Use USB-Camera For VisionWorks Code Sample & Demos:
+================================================================================================
+# Change the code to activate USB-Camera
+cd
+cd VisionWorks-1.6-Samples/nvxio/src/NVX/FrameSource/GStreamer
+sudo vi GStreamerCameraFrameSourceImpl.cpp
+------------------------------------------------------------------------------------------------
+# Go to 143 line:
+From
+stream << "video/x-raw, format=(string){RGB}, width=[1," << configuration.frameWidth <<
+To
+stream << "video/x-raw, format=(string){YUY2}, width=[1," << configuration.frameWidth <<
+
+# Go to 222 line:
+From
+std::string caps_string("video/x-raw, format=(string){");
+To
+std::string caps_string("video/x-raw, width=(int){640}, height=(int){480}, format=(string){");
+------------------------------------------------------------------------------------------------
+# Build
+# Go to the dirctory(VisionWorks-1.6-Samples)
+cd ../../../../..
+make
+
+# Excute with USB-Camera.
+cd bin/aarch64/linux/release
+./nvx_demo_feature_tracker --source="device:///v4l2?index=0"
+./nvx_demo_feature_tracker_nvxcu --source="device:///v4l2?index=0"
+./nvx_demo_hough_transform --source="device:///v4l2?index=0"
+./nvx_demo_motion_estimation --source="device:///v4l2?index=0"
+./nvx_demo_stereo_matching --source="device:///v4l2?index=0"
+./nvx_demo_video_stabilizer --source="device:///v4l2?index=0"
+./nvx_sample_object_tracker_nvxcu --source="device:///v4l2?index=0"
+./nvx_sample_opengl_interop --source="device:///v4l2?index=0"
+./nvx_sample_player --source="device:///v4l2?index=0"
+
 References
 JetsonHacks: https://youtu.be/KROP46Wte4Q
 https://forums.developer.nvidia.com/t/cuda-and-vision-works-demos/72745/2
