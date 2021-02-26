@@ -1,0 +1,15 @@
+=================================================================================================
+How To Start VisionWorks Code Samples & Demos:
+=================================================================================================
+/usr/share/visionworks/sources/install-samples.sh
+cd ~/VisionWorks-1.6-Samples
+make
+cd bin/aarch64/linux/release
+./nvx_demo_feature_tracker
+
+References
+JetsonHacks: https://youtu.be/KROP46Wte4Q
+https://forums.developer.nvidia.com/t/cuda-and-vision-works-demos/72745/2
+https://forums.developer.nvidia.com/t/visionworks-1-6-samples-issue/73905/11
+gst-launch-1.0 v4l2src ! "video/x-raw, width=640, height=480, format=(string)YUY2" ! xvimagesink
+=================================================================================================

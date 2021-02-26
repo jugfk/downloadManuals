@@ -1,0 +1,13 @@
+=================================================================================================
+How To Start VisionWorks Tracking Code Samples & Demos:
+=================================================================================================
+/usr/share/visionworks-tracking/sources/install-samples.sh ~
+cd ~/VisionWorks-Tracking-0.88-Samples
+make
+cd bin/aarch64/linux/release
+./nvx_sample_object_tracker
+
+References
+JetsonHacks: https://youtu.be/KROP46Wte4Q
+https://forums.developer.nvidia.com/t/cuda-and-vision-works-demos/72745/2
+=================================================================================================

@@ -1,0 +1,13 @@
+=================================================================================================
+How To Start VisionWorks SFM Code Samples & Demos:
+=================================================================================================
+/usr/share/visionworks-sfm/sources/install-samples.sh ~
+cd ~/VisionWorks-SFM-0.90-Samples
+make
+cd bin/aarch64/linux/release
+./nvx_sample_sfm
+
+References
+JetsonHacks: https://youtu.be/KROP46Wte4Q
+https://forums.developer.nvidia.com/t/cuda-and-vision-works-demos/72745/2
+=================================================================================================
