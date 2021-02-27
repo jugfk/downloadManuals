@@ -46,6 +46,7 @@ cd bin/aarch64/linux/release
 
 References
 JetsonHacks: https://youtu.be/KROP46Wte4Q
+https://developer.ridgerun.com/wiki/index.php?title=Xavier/JetPack_4.1/Components/VisionWorks
 https://forums.developer.nvidia.com/t/cuda-and-vision-works-demos/72745/2
 https://forums.developer.nvidia.com/t/visionworks-1-6-samples-issue/73905/11
 gst-launch-1.0 v4l2src ! "video/x-raw, width=640, height=480, format=(string)YUY2" ! xvimagesink
