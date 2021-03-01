@@ -10,6 +10,12 @@ cd bin/aarch64/linux/release
 ================================================================================================
 How To Use USB-Camera For VisionWorks Code Sample & Demos:
 ================================================================================================
+# Check Your Camera Information
+sudo apt install v4l-utils
+v4l2-ctl --list-devices
+v4l2-ctl -d /dev/video0 --list-formats
+v4l2-ctl -d /dev/video1 --list-formats
+
 # Change the code to activate USB-Camera
 cd
 cd VisionWorks-1.6-Samples/nvxio/src/NVX/FrameSource/GStreamer
