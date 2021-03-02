@@ -1,6 +1,6 @@
 # =============================================================================================================================
 # How To Install TensorFlow on Jetson Nano, Jetson Xavier NX:
-# Update Date: 21st Feb. 2021
+# Update Date: 2nd March 2021
 # =============================================================================================================================
 # install prerequisites
 sudo apt-get install -y libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
