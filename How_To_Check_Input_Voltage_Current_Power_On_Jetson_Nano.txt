@@ -4,16 +4,16 @@ Edited Date: 5 Mar 2021
 Edited by Stephen Lee
 ===========================================================================================
 # Export the rail(power source) name.
-cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/rail_name_0
+sudo cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/rail_name_0
 
 # Export the DC voltage in millivolts. (Ex: 4984/1000 = 4.984 [v])
-cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage0_input
+sudo cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage0_input
 
 # Export the DC current in milliamperes. (Ex: 504/1000 = 0.504 [A]) 
-cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current0_input
+sudo cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current0_input
 
 # Export the power in milliwatts. (Ex: 2261/1000 = 2.261 [watts])
-cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power0_input
+sudo cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power0_input
 
 
 # Reference
