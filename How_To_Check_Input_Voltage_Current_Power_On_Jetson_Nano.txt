@@ -1,0 +1,21 @@
+===========================================================================================
+How To Check Input Voltage, Current, and Pwer on Jetson Nano & Jetson Xaiver NX:
+Edited Date: 5 Mar 2021
+Edited by Stephen Lee
+===========================================================================================
+# Export the rail(power source) name.
+cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/rail_name_0
+
+# Export the DC voltage in millivolts. (Ex: 4984/1000 = 4.984 [v])
+cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_voltage0_input
+
+# Export the DC current in milliamperes. (Ex: 504/1000 = 0.504 [A]) 
+cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_current0_input
+
+# Export the power in milliwatts. (Ex: 2261/1000 = 2.261 [watts])
+cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power0_input
+
+
+# Reference
+https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3243/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fpower_management_nano.html%23wwpID0E0XE0HA
+============================================================================================
