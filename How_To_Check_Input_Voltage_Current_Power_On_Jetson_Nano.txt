@@ -1,5 +1,5 @@
 ===========================================================================================
-How To Check Input Voltage, Current, and Pwer on Jetson Nano & Jetson Xaiver NX:
+How To Check Input Voltage, Current, and Pwer on Jetson Nano 4GB:
 Edited Date: 5 Mar 2021
 Edited by Stephen Lee
 ===========================================================================================
